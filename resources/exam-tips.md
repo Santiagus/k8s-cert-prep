@@ -35,5 +35,5 @@ Logistics change; verify the [Linux Foundation candidate handbook](https://docs.
 ## Practice cadence
 
 - Domain tasks in this repo → verify against `solutions/`.
-- Timed [labs/](../labs/) closer to exam week.
+- Timed [labs/exam-sim/](../labs/exam-sim/) closer to exam week: broken state → fix → `verify.sh`.
 - Optional paid Killer.sh (voucher) as a dress rehearsal — do not paste those scenarios here.
