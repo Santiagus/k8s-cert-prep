@@ -1,4 +1,3 @@
 # Solutions — cks/04-minimize-microservice-vulns
 
-- [01-psa-baseline.md](01-psa-baseline.md)
-- [02-secret-volume.md](02-secret-volume.md)
+Worked answers for tasks 01–05. Attempt tasks first.

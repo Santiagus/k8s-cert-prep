@@ -55,12 +55,41 @@ Link and practice against these; write your own tasks in this repo rather than p
 
 ## CKS-oriented tooling (free / OSS)
 
-- [Falco](https://falco.org/docs/) — runtime detection
-- [Trivy](https://aquasecurity.github.io/trivy/) — image / config / IaC scanning
+Repo cheat-sheet: [resources/cks-tools.md](../resources/cks-tools.md).
+
+### Scanning, SBOM, signing
+
+- [Trivy](https://aquasecurity.github.io/trivy/) — image / config / IaC / SBOM scanning
+- [Syft](https://github.com/anchore/syft) — SBOM generation (OSS)
+- [Cosign](https://docs.sigstore.dev/cosign/system_config/installation/) / [Sigstore docs](https://docs.sigstore.dev/) — image signing and verification
+- [Kubesec](https://kubesec.io/) — static risk scoring for Kubernetes YAML
+
+### Admission and policy
+
+- [Kyverno](https://kyverno.io/) — Kubernetes-native policies (registry allowlist, verifyImages, restrict tags)
+- [Kyverno policy library](https://kyverno.io/policies/)
 - [OPA Gatekeeper](https://open-policy-agent.github.io/gatekeeper/website/) — admission policy
-- [Kyverno](https://kyverno.io/) — Kubernetes-native policies (alternative to Gatekeeper)
+- [Gatekeeper library](https://github.com/open-policy-agent/gatekeeper-library) — ConstraintTemplates (e.g. allowed repos)
+
+### Runtime, kernel, audit
+
+- [Falco](https://falco.org/docs/) — runtime detection
+- [Falco rules](https://falco.org/docs/rules/)
 - [AppArmor](https://kubernetes.io/docs/tutorials/security/apparmor/) / [seccomp](https://kubernetes.io/docs/tutorials/security/seccomp/)
-- [CIS Kubernetes Benchmark](https://www.cisecurity.org/benchmark/kubernetes) — hardening baselines (link the site; do not paste proprietary PDF text)
+- [Auditing](https://kubernetes.io/docs/tasks/debug/debug-cluster/audit/) — API server audit policy + log flags
+- [Encrypting Secret Data at Rest](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/)
+
+### Network, RBAC, Pod security (CKS-heavy)
+
+- [NetworkPolicy](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
+- [RBAC](https://kubernetes.io/docs/reference/access-authn-authz/rbac/)
+- [Service Accounts](https://kubernetes.io/docs/reference/access-authn-authz/service-accounts-admin/)
+- [Pod Security Admission](https://kubernetes.io/docs/concepts/security/pod-security-admission/) / [Pod Security Standards](https://kubernetes.io/docs/concepts/security/pod-security-standards/)
+- [Security Context](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/)
+
+### Benchmarks / threat models (link only)
+
+- [CIS Kubernetes Benchmark](https://www.cisecurity.org/benchmark/kubernetes) — hardening baselines (do not paste proprietary PDF text)
 - [OWASP Kubernetes Top Ten](https://owasp.org/www-project-kubernetes-top-ten/)
 
 ## Helm / Kustomize / operators

@@ -72,6 +72,9 @@ kubectl config current-context   # expect kind-cka-prep
 | 05 | [05-mixed-broken-stack/](05-mixed-broken-stack/) | CKA | Workloads + Net + Storage + Troubleshoot | 40 min |
 | 06 | [06-rbac-fix/](06-rbac-fix/) | CKA / light CKS | Architecture / Cluster Hardening | 20 min |
 | 07 | [07-networkpolicy/](07-networkpolicy/) | light CKS | Cluster Setup / Networking | 25 min |
+| 08 | [08-psa-baseline/](08-psa-baseline/) | CKS | Minimize Microservice Vulns (PSA) | 20 min |
+| 09 | [09-securitycontext-harden/](09-securitycontext-harden/) | CKS | System Hardening / Runtime | 25 min |
+| 10 | [10-sa-rbac-harden/](10-sa-rbac-harden/) | CKS | Cluster Hardening / Microservice Vulns | 25 min |
 
 ## When to use sims vs topic tasks
 
@@ -79,6 +82,7 @@ kubectl config current-context   # expect kind-cka-prep
 |-------|-----|
 | Learning a domain | `cka/*/tasks/` or `cks/*/tasks/` (one skill at a time) |
 | After domain notes + tasks | Matching exam-sim (01–04, 06–07) under time |
+| CKS security drills | Sims 06–10 (RBAC, NetworkPolicy, PSA, SecurityContext, SA harden) |
 | December weeks 6–8 | Heavy troubleshooting (01) + mixed (05) + weak-topic redo |
 | Dress rehearsal | Optional Killer.sh via voucher; then light review of missed sims |
 

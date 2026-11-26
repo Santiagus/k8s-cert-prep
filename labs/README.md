@@ -5,7 +5,7 @@ Multi-topic or cluster-level practice. Single-domain drills stay under `cka/*/ta
 | Lab | Purpose |
 |-----|---------|
 | [kind-bootstrap/](kind-bootstrap/) | Create / delete the primary multi-node kind cluster for daily CKA drills |
-| [exam-sim/](exam-sim/) | Timed exam-style sims: broken state → fix → `verify.sh` (CKA + light CKS) |
+| [exam-sim/](exam-sim/) | Timed exam-style sims: broken state → fix → `verify.sh` (CKA + CKS; sims 08–10 are CKS-heavy) |
 | [cka-mixed-drill/](cka-mixed-drill/) | Untimed/build-from-scratch multi-domain stack (workloads + net + storage) |
 
 ## When to use what

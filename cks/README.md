@@ -22,4 +22,4 @@ Certified Kubernetes Security Specialist prep. Domain weights from the [CNCF CKS
 - [05 Supply Chain Security](05-supply-chain/notes.md) — image provenance, scanning, SBOM, admission, signed artifacts
 - [06 Monitoring, Logging & Runtime](06-monitoring-logging-runtime/notes.md) — audit logs, Falco, immutability, threat detection
 
-Each topic has `notes.md`, `tasks/`, and `solutions/`.
+Each topic has expanded `notes.md` (skill checklists + doc links), spoiler-free `tasks/`, and matching `solutions/`. Aim for several tasks per domain; multi-domain timed drills live under [labs/exam-sim/](../labs/exam-sim/) (CKS-oriented: 07–10). Tool map: [resources/cks-tools.md](../resources/cks-tools.md).
