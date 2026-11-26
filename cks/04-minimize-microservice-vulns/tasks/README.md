@@ -1,3 +1,5 @@
 # Tasks — cks/04-minimize-microservice-vulns
+Starter tasks (expand after CKA).
 
-Add practice prompts here. Keep solutions out of this folder.
+- [01-psa-baseline.md](01-psa-baseline.md)
+- [02-secret-volume.md](02-secret-volume.md)

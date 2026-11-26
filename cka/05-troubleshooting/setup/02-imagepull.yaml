@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ts-pull
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: bad-image
+  namespace: ts-pull
+spec:
+  containers:
+    - name: app
+      image: nginx:1.25-this-tag-does-not-exist

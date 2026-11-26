@@ -1,27 +1,75 @@
 # Sources
 
-Starter links only. Prefer primary CNCF / Kubernetes docs over third-party summaries when they disagree.
+Prefer primary CNCF / Kubernetes docs when third-party material disagrees. Re-check links and curriculum PDFs before an exam sitting.
 
-## Official
+## Official curriculum & exam
 
 - [CKA exam page (CNCF)](https://www.cncf.io/training/certification/cka/)
 - [CKS exam page (CNCF)](https://www.cncf.io/training/certification/cks/)
-- [CNCF open curriculum (GitHub)](https://github.com/cncf/curriculum)
-- [Kubernetes documentation](https://kubernetes.io/docs/home/)
+- [CNCF open curriculum (GitHub)](https://github.com/cncf/curriculum) — CKA / CKS PDFs and domain weights
+- [Linux Foundation Training candidate handbook](https://docs.linuxfoundation.org/tc-docs/certification/lf-candidate-handbook) — PSI Online, allowed materials, exam environment
+- Domain ↔ folder map in this repo: [curriculum.md](curriculum.md)
+
+## Kubernetes documentation (primary study)
+
+- [Kubernetes docs home](https://kubernetes.io/docs/home/)
 - [kubectl reference](https://kubernetes.io/docs/reference/kubectl/)
-- [Kubernetes API reference](https://kubernetes.io/docs/reference/kubernetes-api/)
+- [kubectl cheat sheet (official)](https://kubernetes.io/docs/reference/kubectl/quick-reference/)
+- [API reference](https://kubernetes.io/docs/reference/kubernetes-api/)
+- [kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/)
+- [etcd backup / restore (kubeadm)](https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/)
+- [RBAC](https://kubernetes.io/docs/reference/access-authn-authz/rbac/)
+- [NetworkPolicy](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
+- [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)
+- [Gateway API](https://gateway-api.sigs.k8s.io/)
+- [Persistent Volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)
+- [StorageClasses](https://kubernetes.io/docs/concepts/storage/storage-classes/)
+- [Debugging applications](https://kubernetes.io/docs/tasks/debug/debug-application/)
+- [Debug clusters](https://kubernetes.io/docs/tasks/debug/debug-cluster/)
 
-## Useful public prep
+## Local clusters (free / OSS)
 
-- [Killer.sh CKA / CKS exam simulators](https://killer.sh/) (included with exam voucher)
-- [Kubernetes the Hard Way](https://github.com/kelseyhightower/kubernetes-the-hard-way) — cluster bootstrap depth (CKA)
-- [CIS Kubernetes Benchmark](https://www.cisecurity.org/benchmark/kubernetes) — hardening baselines (CKS)
+Primary in this repo: **kind** — see [resources/local-clusters.md](../resources/local-clusters.md) and [labs/kind-bootstrap/](../labs/kind-bootstrap/).
+
+| Tool | License / cost | Notes |
+|------|----------------|-------|
+| [kind](https://kind.sigs.k8s.io/) | Apache-2.0 | Multi-node Docker clusters; good CKA fit |
+| [k3d](https://k3d.io/) | MIT | Fast k3s-in-Docker alternative |
+| [minikube](https://minikube.sigs.k8s.io/) | Apache-2.0 | Single-node oriented; many addons |
+| [kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/) | Apache-2.0 | Closest to exam cluster-install tasks |
+
+## Free / OSS practice (attribution — do not copy wholesale)
+
+Link and practice against these; write your own tasks in this repo rather than pasting their scenarios.
+
+- [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes) examples and e2e patterns
+- [Kubernetes the Hard Way](https://github.com/kelseyhightower/kubernetes-the-hard-way) — deep bootstrap (CKA architecture)
+- [killercoda](https://killercoda.com/) — free browser scenarios (community + vendor); use as warm-up, not as content to dump here
+- Community “CKA practice” repos on GitHub — treat as inspiration only; keep this tree original
+
+## Paid optional (disclosed)
+
+- [Killer.sh](https://killer.sh/) CKA / CKS simulators — typically **included with the exam voucher** for a limited window; otherwise paid. Excellent mock environments; **do not** copy scenarios into this public repo.
+
+## CKS-oriented tooling (free / OSS)
+
+- [Falco](https://falco.org/docs/) — runtime detection
+- [Trivy](https://aquasecurity.github.io/trivy/) — image / config / IaC scanning
+- [OPA Gatekeeper](https://open-policy-agent.github.io/gatekeeper/website/) — admission policy
+- [Kyverno](https://kyverno.io/) — Kubernetes-native policies (alternative to Gatekeeper)
+- [AppArmor](https://kubernetes.io/docs/tutorials/security/apparmor/) / [seccomp](https://kubernetes.io/docs/tutorials/security/seccomp/)
+- [CIS Kubernetes Benchmark](https://www.cisecurity.org/benchmark/kubernetes) — hardening baselines (link the site; do not paste proprietary PDF text)
 - [OWASP Kubernetes Top Ten](https://owasp.org/www-project-kubernetes-top-ten/)
-- [Falco](https://falco.org/docs/) — runtime detection (CKS)
-- [Trivy](https://aquasecurity.github.io/trivy/) — image / config scanning (CKS)
-- [OPA Gatekeeper](https://open-policy-agent.github.io/gatekeeper/website/) — admission policy (CKS)
+
+## Helm / Kustomize / operators
+
+- [Helm](https://helm.sh/docs/)
+- [Kustomize](https://kubectl.docs.kubernetes.io/references/kustomize/) (`kubectl apply -k`)
+- [Operator pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/)
+- [Custom Resources](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/)
 
 ## Exam logistics
 
-- Linux Foundation Training candidate handbook and FAQ for the current exam environment version
-- Confirm CKA is passed before scheduling CKS (active CKA not required at CKS sit time)
+- Confirm current Kubernetes version on the CKA / CKS exam pages before booking.
+- Docs allowed in the exam environment: typically kubernetes.io and a short allow-list — verify the handbook for your sitting.
+- CKA is a prerequisite to **schedule** CKS; check CNCF/LF pages for whether an active CKA is required at sit time.

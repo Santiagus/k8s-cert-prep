@@ -1,26 +1,62 @@
 # k8s-cert-prep
 
-Personal study repo for the **Certified Kubernetes Administrator (CKA)** and **Certified Kubernetes Security Specialist (CKS)** exams. Domain folders hold notes, practice tasks, and solutions aligned to the current CNCF curricula.
+Personal study repo for the **Certified Kubernetes Administrator (CKA)** and **Certified Kubernetes Security Specialist (CKS)** exams. Domain folders hold original notes, performance-based tasks, and worked solutions aligned to the [CNCF curricula](https://github.com/cncf/curriculum).
+
+**Target path:** sit **CKA by December**, then build toward **CKS within a year**.
 
 ## Navigation
 
 | Path | Purpose |
 |------|---------|
 | [docs/curriculum.md](docs/curriculum.md) | Official domains mapped to folders |
-| [docs/sources.md](docs/sources.md) | Official and public prep links |
-| [cka/](cka/) | CKA domains, notes, tasks, solutions |
-| [cks/](cks/) | CKS domains, notes, tasks, solutions |
+| [docs/sources.md](docs/sources.md) | Official docs, free/OSS tools, paid optional disclosure |
+| [cka/](cka/) | CKA domains — notes, tasks, solutions |
+| [cks/](cks/) | CKS domains — notes + starter tasks |
 | [shared/](shared/) | Cross-exam reference material |
-| [labs/](labs/) | Multi-topic or cluster lab scenarios |
-| [resources/](resources/) | Cheat sheets, checklists, bookmarks |
+| [labs/](labs/) | kind bootstrap + timed multi-domain drills |
+| [resources/](resources/) | Cheat sheets, exam tips, local-cluster guide |
+| [AGENTS.md](AGENTS.md) | Rules for AI coding agents working in this repo |
 
-## Study approach
+## Local lab (primary: kind)
 
-1. Skim [docs/curriculum.md](docs/curriculum.md) and pick one domain folder.
-2. Read and expand `notes.md` while working through Kubernetes docs.
-3. Attempt items in `tasks/` without opening `solutions/`.
-4. Compare against `solutions/`, then capture gaps back in notes.
-5. Use [labs/](labs/) for timed, multi-domain practice closer to exam day.
-6. Keep [docs/sources.md](docs/sources.md) updated as useful links appear.
+We standardize on **[kind](https://kind.sigs.k8s.io/)** (multi-node, SIG project, free/OSS). Rationale and alternatives: [resources/local-clusters.md](resources/local-clusters.md).
 
-Start with CKA before CKS — CKA is a prerequisite for sitting the CKS exam.
+```bash
+./labs/kind-bootstrap/create-cluster.sh
+kubectl get nodes
+# when finished:
+./labs/kind-bootstrap/delete-cluster.sh
+```
+
+## December CKA study path (suggested)
+
+Assumes ~5 focused sessions/week after work. Adjust to your calendar; **Troubleshooting (30%)** and **Architecture (25%)** get the most reps.
+
+| Week | Focus | Repo path |
+|------|--------|-----------|
+| 1 | Lab up + kubectl speed; skim all domain notes | [resources/](resources/), [labs/kind-bootstrap/](labs/kind-bootstrap/) |
+| 2 | Cluster architecture: RBAC, etcd, kubeadm, Helm/Kustomize | [cka/01-cluster-architecture/](cka/01-cluster-architecture/) |
+| 3 | Workloads & scheduling | [cka/02-workloads-scheduling/](cka/02-workloads-scheduling/) |
+| 4 | Services, NetworkPolicy, Ingress, Gateway API, DNS | [cka/03-services-networking/](cka/03-services-networking/) |
+| 5 | Storage PV/PVC/SC | [cka/04-storage/](cka/04-storage/) |
+| 6 | Troubleshooting drills (heavy) | [cka/05-troubleshooting/](cka/05-troubleshooting/) |
+| 7 | Mixed timed lab + weak-topic redo | [labs/cka-mixed-drill/](labs/cka-mixed-drill/) |
+| 8 | Mock under time (optional Killer.sh via voucher); light review | [resources/exam-tips.md](resources/exam-tips.md) |
+
+**How to practice each domain:** read `notes.md` → attempt `tasks/` without spoilers → compare `solutions/` → jot gaps back into notes.
+
+## After CKA → CKS
+
+1. Keep the same kind (or kubeadm) lab habit.
+2. Work through [cks/](cks/) checklists; expand starter tasks.
+3. Add Falco, Trivy, Kyverno/Gatekeeper, AppArmor/seccomp practice — links in [docs/sources.md](docs/sources.md).
+
+## Agents
+
+Load [AGENTS.md](AGENTS.md), then only matching skills under `.agents/skills/`. Prefer small PRs scoped to one domain or lab. See [.agents/README.md](.agents/README.md).
+
+## Study hygiene
+
+- Original notes + kubernetes.io links — no paid-course or Killer.sh scenario dumps.
+- Tasks stay spoiler-free; solutions stay under `solutions/`.
+- Never commit kubeconfigs, tokens, or `.env` files.

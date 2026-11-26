@@ -1,3 +1,5 @@
 # Tasks — cks/01-cluster-setup
+Starter tasks (expand after CKA).
 
-Add practice prompts here. Keep solutions out of this folder.
+- [01-default-deny-netpol.md](01-default-deny-netpol.md)
+- [02-ingress-tls.md](02-ingress-tls.md)

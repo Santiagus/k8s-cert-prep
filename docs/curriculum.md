@@ -1,6 +1,6 @@
 # Curriculum map
 
-Domain weights below match the current CNCF / Linux Foundation exam pages and the open [cncf/curriculum](https://github.com/cncf/curriculum) repo. Re-check those sources before an exam sitting; competencies can change even when folder names stay the same.
+Domain weights below match the current CNCF / Linux Foundation exam pages and the open [cncf/curriculum](https://github.com/cncf/curriculum) repo. Re-check those sources before an exam sitting; competencies can change even when folder names stay the same. Some CKS PDF revisions historically swapped the Cluster Setup vs System Hardening percentages — trust the live CNCF exam page if they disagree.
 
 ## CKA → folders
 

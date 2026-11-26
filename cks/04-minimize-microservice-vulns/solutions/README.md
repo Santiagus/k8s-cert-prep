@@ -1,3 +1,4 @@
 # Solutions — cks/04-minimize-microservice-vulns
 
-Worked answers and manifests for the matching `tasks/` items.
+- [01-psa-baseline.md](01-psa-baseline.md)
+- [02-secret-volume.md](02-secret-volume.md)

@@ -1,3 +1,4 @@
 # Solutions — cks/06-monitoring-logging-runtime
 
-Worked answers and manifests for the matching `tasks/` items.
+- [01-audit-policy-sketch.md](01-audit-policy-sketch.md)
+- [02-readonly-rootfs.md](02-readonly-rootfs.md)

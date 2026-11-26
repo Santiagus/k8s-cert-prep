@@ -1,3 +1,12 @@
 # resources
 
-Cheat sheets, checklists, bookmark lists, and other static aids. Keep this folder free of secrets, kubeconfigs, and credentials.
+Static study aids for CKA / CKS. No secrets, kubeconfigs, or credentials.
+
+| File | Purpose |
+|------|---------|
+| [local-clusters.md](local-clusters.md) | kind (primary), k3d, minikube — why and how |
+| [kubectl-cheatsheet.md](kubectl-cheatsheet.md) | High-frequency kubectl for exam speed |
+| [yaml-patterns.md](yaml-patterns.md) | Dry-run habits and common YAML shapes |
+| [exam-tips.md](exam-tips.md) | PSI Online, timeboxing, allowed docs |
+
+Lab bootstrap scripts live under [labs/kind-bootstrap/](../labs/kind-bootstrap/).

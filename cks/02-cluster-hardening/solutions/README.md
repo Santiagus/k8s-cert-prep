@@ -1,3 +1,4 @@
 # Solutions — cks/02-cluster-hardening
 
-Worked answers and manifests for the matching `tasks/` items.
+- [01-sa-automount.md](01-sa-automount.md)
+- [02-minimal-rbac.md](02-minimal-rbac.md)

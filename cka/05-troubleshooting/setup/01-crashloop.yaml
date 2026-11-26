@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ts-crash
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: flaky
+  namespace: ts-crash
+spec:
+  restartPolicy: Always
+  containers:
+    - name: flaky
+      image: busybox:1.36
+      command: ["sh", "-c", "echo boom; exit 1"]
