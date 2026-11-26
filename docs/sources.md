@@ -31,6 +31,8 @@ Prefer primary CNCF / Kubernetes docs when third-party material disagrees. Re-ch
 
 Primary in this repo: **kind** — see [resources/local-clusters.md](../resources/local-clusters.md) and [labs/kind-bootstrap/](../labs/kind-bootstrap/).
 
+Timed broken-state drills with `setup.sh` / `verify.sh`: [labs/exam-sim/](../labs/exam-sim/).
+
 | Tool | License / cost | Notes |
 |------|----------------|-------|
 | [kind](https://kind.sigs.k8s.io/) | Apache-2.0 | Multi-node Docker clusters; good CKA fit |

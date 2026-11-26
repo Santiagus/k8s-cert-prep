@@ -13,7 +13,7 @@ Personal study repo for the **Certified Kubernetes Administrator (CKA)** and **C
 | [cka/](cka/) | CKA domains — notes, tasks, solutions |
 | [cks/](cks/) | CKS domains — notes + starter tasks |
 | [shared/](shared/) | Cross-exam reference material |
-| [labs/](labs/) | kind bootstrap + timed multi-domain drills |
+| [labs/](labs/) | kind bootstrap + [exam-sim](labs/exam-sim/) + mixed drills |
 | [resources/](resources/) | Cheat sheets, exam tips, local-cluster guide |
 | [AGENTS.md](AGENTS.md) | Rules for AI coding agents working in this repo |
 
@@ -35,15 +35,15 @@ Assumes ~5 focused sessions/week after work. Adjust to your calendar; **Troubles
 | Week | Focus | Repo path |
 |------|--------|-----------|
 | 1 | Lab up + kubectl speed; skim all domain notes | [resources/](resources/), [labs/kind-bootstrap/](labs/kind-bootstrap/) |
-| 2 | Cluster architecture: RBAC, etcd, kubeadm, Helm/Kustomize | [cka/01-cluster-architecture/](cka/01-cluster-architecture/) |
-| 3 | Workloads & scheduling | [cka/02-workloads-scheduling/](cka/02-workloads-scheduling/) |
-| 4 | Services, NetworkPolicy, Ingress, Gateway API, DNS | [cka/03-services-networking/](cka/03-services-networking/) |
-| 5 | Storage PV/PVC/SC | [cka/04-storage/](cka/04-storage/) |
-| 6 | Troubleshooting drills (heavy) | [cka/05-troubleshooting/](cka/05-troubleshooting/) |
-| 7 | Mixed timed lab + weak-topic redo | [labs/cka-mixed-drill/](labs/cka-mixed-drill/) |
-| 8 | Mock under time (optional Killer.sh via voucher); light review | [resources/exam-tips.md](resources/exam-tips.md) |
+| 2 | Cluster architecture: RBAC, etcd, kubeadm, Helm/Kustomize | [cka/01-cluster-architecture/](cka/01-cluster-architecture/) → then [exam-sim 06](labs/exam-sim/06-rbac-fix/) |
+| 3 | Workloads & scheduling | [cka/02-workloads-scheduling/](cka/02-workloads-scheduling/) → [exam-sim 02](labs/exam-sim/02-workloads-rollout/) |
+| 4 | Services, NetworkPolicy, Ingress, Gateway API, DNS | [cka/03-services-networking/](cka/03-services-networking/) → [exam-sim 03](labs/exam-sim/03-networking-endpoints/) |
+| 5 | Storage PV/PVC/SC | [cka/04-storage/](cka/04-storage/) → [exam-sim 04](labs/exam-sim/04-storage-pvc/) |
+| 6 | Troubleshooting drills (heavy) | [cka/05-troubleshooting/](cka/05-troubleshooting/) → [exam-sim 01](labs/exam-sim/01-troubleshoot-crashloop/) |
+| 7 | Mixed timed sims + build-from-scratch lab + weak-topic redo | [exam-sim 05](labs/exam-sim/05-mixed-broken-stack/), [cka-mixed-drill](labs/cka-mixed-drill/) |
+| 8 | Mock under time (optional Killer.sh via voucher); light review | [labs/exam-sim/](labs/exam-sim/), [resources/exam-tips.md](resources/exam-tips.md) |
 
-**How to practice each domain:** read `notes.md` → attempt `tasks/` without spoilers → compare `solutions/` → jot gaps back into notes.
+**How to practice each domain:** read `notes.md` → attempt `tasks/` without spoilers → compare `solutions/` → jot gaps back into notes → run the matching [exam-sim](labs/exam-sim/) under its timebox (`setup.sh` → fix → `verify.sh`).
 
 ## After CKA → CKS
 
