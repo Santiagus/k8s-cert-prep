@@ -1,3 +1,5 @@
 # Tasks — cks/05-supply-chain
+Starter tasks (expand after CKA).
 
-Add practice prompts here. Keep solutions out of this folder.
+- [01-trivy-scan.md](01-trivy-scan.md)
+- [02-kyverno-registry-policy.md](02-kyverno-registry-policy.md)
